@@ -12,7 +12,7 @@ const products = [
 ];
 
 const requestHandler = (req, res) => {
-    const logMessage = `[${new Date().toISOString()}] ${req.method} ${req.url}\n`;
+    const logMessage = [`${new Date().toISOString()}] ${req.method} ${req.url}\n`];
 
     fs.appendFile(LOG_FILE, logMessage, (err) => {
         if (err) console.error("Failed to write log:", err);
